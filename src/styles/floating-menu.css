@@ -1,0 +1,297 @@
+/* Menu operacional flutuante — glassmorphism (centro de operações) */
+
+.geo-floating-menu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  font-family: inherit;
+}
+
+.geo-floating-menu__panel {
+  display: grid;
+  gap: 6px;
+  width: min(300px, calc(100vw - 40px));
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 14, 24, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 18px 42px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.97);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 220ms ease;
+}
+
+.geo-floating-menu--open .geo-floating-menu__panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.geo-floating-menu__header {
+  padding: 4px 8px 2px;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.geo-floating-menu__option {
+  --mode-accent: #3dffa8;
+  --mode-accent-rgb: 61, 255, 168;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+  animation: geo-floating-menu-in 320ms ease backwards;
+}
+
+.geo-floating-menu__option:nth-child(2) {
+  animation-delay: 40ms;
+}
+.geo-floating-menu__option:nth-child(3) {
+  animation-delay: 80ms;
+}
+.geo-floating-menu__option:nth-child(4) {
+  animation-delay: 120ms;
+}
+.geo-floating-menu__option:nth-child(5) {
+  animation-delay: 160ms;
+}
+
+.geo-floating-menu__option:hover {
+  background: rgba(var(--mode-accent-rgb), 0.1);
+  border-color: rgba(var(--mode-accent-rgb), 0.35);
+  transform: translateX(-2px);
+}
+
+.geo-floating-menu__option--active {
+  background: rgba(var(--mode-accent-rgb), 0.14);
+  border-color: rgba(var(--mode-accent-rgb), 0.45);
+  box-shadow: 0 0 0 1px rgba(var(--mode-accent-rgb), 0.2);
+}
+
+.geo-floating-menu__icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  color: var(--mode-accent);
+  background: rgba(var(--mode-accent-rgb), 0.14);
+  box-shadow: inset 0 0 0 1px rgba(var(--mode-accent-rgb), 0.22);
+}
+
+.geo-floating-menu__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.geo-floating-menu__copy {
+  min-width: 0;
+}
+
+.geo-floating-menu__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.geo-floating-menu__desc {
+  display: block;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.geo-floating-menu__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mode-accent);
+  box-shadow: 0 0 10px var(--mode-accent);
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+.geo-floating-menu__option--active .geo-floating-menu__dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.geo-floating-menu__trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 10px 14px 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(9, 14, 24, 0.88);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.geo-floating-menu__trigger:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-1px);
+}
+
+.geo-floating-menu--open .geo-floating-menu__trigger {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+}
+
+.geo-floating-menu__trigger-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  color: var(--mode-accent, #3dffa8);
+  background: rgba(var(--mode-accent-rgb, 61, 255, 168), 0.16);
+  box-shadow: inset 0 0 0 1px rgba(var(--mode-accent-rgb, 61, 255, 168), 0.28);
+  transition:
+    color 220ms ease,
+    background 220ms ease;
+}
+
+.geo-floating-menu__trigger-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.geo-floating-menu__trigger-text {
+  display: grid;
+  text-align: left;
+}
+
+.geo-floating-menu__trigger-kicker {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.geo-floating-menu__trigger-label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.geo-floating-menu__chevron {
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.geo-floating-menu--open .geo-floating-menu__chevron {
+  transform: rotate(180deg);
+}
+
+.geo-floating-menu__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 5190;
+  background: rgba(4, 8, 16, 0.28);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  animation: geo-floating-menu-fade 220ms ease;
+}
+
+@keyframes geo-floating-menu-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes geo-floating-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .geo-floating-menu {
+    left: 20px;
+    right: 20px;
+    bottom: 16px;
+    align-items: stretch;
+  }
+
+  .geo-floating-menu__panel {
+    width: 100%;
+    transform-origin: bottom center;
+  }
+
+  .geo-floating-menu__trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .geo-floating-menu__option:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .geo-floating-menu__desc {
+    display: none;
+  }
+
+  .geo-floating-menu__option {
+    grid-template-columns: auto 1fr auto;
+    padding: 9px 10px;
+  }
+}

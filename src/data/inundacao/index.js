@@ -1,0 +1,86 @@
+export const floodFiles = {
+  1.2: '/inundacao/flood_1.2m_clean.geojson',
+  1.4: '/inundacao/flood_1.4m_clean.geojson',
+  1.6: '/inundacao/flood_1.6m_clean.geojson',
+  1.8: '/inundacao/flood_1.8m_clean.geojson',
+
+  2.0: '/inundacao/flood_2m_clean.geojson',
+  2.2: '/inundacao/flood_2.2m_clean.geojson',
+  2.4: '/inundacao/flood_2.4m_clean.geojson',
+  2.6: '/inundacao/flood_2.6m_clean.geojson',
+  2.8: '/inundacao/flood_2.8m_clean.geojson',
+
+  3.0: '/inundacao/flood_3m_clean.geojson',
+  3.2: '/inundacao/flood_3.2m_clean.geojson',
+  3.4: '/inundacao/flood_3.4m_clean.geojson',
+  3.6: '/inundacao/flood_3.6m_clean.geojson',
+  3.8: '/inundacao/flood_3.8m_clean.geojson',
+
+  4.0: '/inundacao/flood_4m_clean.geojson',
+  4.2: '/inundacao/flood_4.2m_clean.geojson',
+  4.4: '/inundacao/flood_4.4m_clean.geojson',
+  4.6: '/inundacao/flood_4.6m_clean.geojson',
+  4.8: '/inundacao/flood_4.8m_clean.geojson',
+
+  5.0: '/inundacao/flood_5m_clean.geojson',
+  5.2: '/inundacao/flood_5.2m_clean.geojson',
+  5.4: '/inundacao/flood_5.4m_clean.geojson',
+  5.6: '/inundacao/flood_5.6m_clean.geojson',
+  5.8: '/inundacao/flood_5.8m_clean.geojson',
+
+  6.0: '/inundacao/flood_6m_clean.geojson',
+  6.2: '/inundacao/flood_6.2m_clean.geojson',
+  6.4: '/inundacao/flood_6.4m_clean.geojson',
+  6.6: '/inundacao/flood_6.6m_clean.geojson',
+  6.8: '/inundacao/flood_6.8m_clean.geojson',
+
+  7.0: '/inundacao/flood_7m_clean.geojson',
+  7.2: '/inundacao/flood_7.2m_clean.geojson',
+  7.4: '/inundacao/flood_7.4m_clean.geojson',
+  7.6: '/inundacao/flood_7.6m_clean.geojson',
+  7.8: '/inundacao/flood_7.8m_clean.geojson',
+
+  8.0: '/inundacao/flood_8m_clean.geojson',
+  8.2: '/inundacao/flood_8.2m_clean.geojson',
+  8.4: '/inundacao/flood_8.4m_clean.geojson',
+  8.6: '/inundacao/flood_8.6m_clean.geojson',
+  8.8: '/inundacao/flood_8.8m_clean.geojson',
+
+  9.0: '/inundacao/flood_9m_clean.geojson',
+  9.2: '/inundacao/flood_9.2m_clean.geojson',
+  9.4: '/inundacao/flood_9.4m_clean.geojson',
+  9.6: '/inundacao/flood_9.6m_clean.geojson',
+  9.8: '/inundacao/flood_9.8m_clean.geojson',
+
+  10.0: '/inundacao/flood_10m_clean.geojson',
+  10.2: '/inundacao/flood_10.2m_clean.geojson',
+  10.4: '/inundacao/flood_10.4m_clean.geojson',
+  10.6: '/inundacao/flood_10.6m_clean.geojson',
+  10.8: '/inundacao/flood_10.8m_clean.geojson',
+
+  11.0: '/inundacao/flood_11m_clean.geojson',
+  11.2: '/inundacao/flood_11.2m_clean.geojson',
+  11.4: '/inundacao/flood_11.4m_clean.geojson',
+  11.6: '/inundacao/flood_11.6m_clean.geojson',
+  11.8: '/inundacao/flood_11.8m_clean.geojson',
+
+  12.0: '/inundacao/flood_12m_clean.geojson',
+  12.2: '/inundacao/flood_12.2m_clean.geojson',
+  12.4: '/inundacao/flood_12.4m_clean.geojson',
+  12.6: '/inundacao/flood_12.6m_clean.geojson',
+  12.8: '/inundacao/flood_12.8m_clean.geojson',
+
+  13.0: '/inundacao/flood_13m_clean.geojson',
+  13.2: '/inundacao/flood_13.2m_clean.geojson',
+  13.4: '/inundacao/flood_13.4m_clean.geojson',
+  13.6: '/inundacao/flood_13.6m_clean.geojson',
+  13.8: '/inundacao/flood_13.8m_clean.geojson',
+
+  14.0: '/inundacao/flood_14m_clean.geojson',
+  14.2: '/inundacao/flood_14.2m_clean.geojson',
+  14.4: '/inundacao/flood_14.4m_clean.geojson',
+  14.6: '/inundacao/flood_14.6m_clean.geojson',
+  14.8: '/inundacao/flood_14.8m_clean.geojson',
+
+  15.0: '/inundacao/flood_15m_clean.geojson',
+}

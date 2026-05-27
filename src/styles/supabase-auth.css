@@ -1,0 +1,98 @@
+/* Painel de autenticação Supabase — mobile-first */
+
+.geo-supabase-auth {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.geo-supabase-auth__kicker {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.geo-supabase-auth__status {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.geo-supabase-auth__profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(94, 179, 255, 0.14);
+  border: 1px solid rgba(94, 179, 255, 0.3);
+  color: #5eb3ff;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.geo-supabase-auth__field {
+  display: grid;
+  gap: 5px;
+}
+
+.geo-supabase-auth__field span {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.geo-supabase-auth__field input {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  font: inherit;
+}
+
+.geo-supabase-auth__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.geo-supabase-auth__btn {
+  min-height: 40px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.geo-supabase-auth__btn--primary {
+  background: #1677ff;
+  color: white;
+}
+
+.geo-supabase-auth__btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.geo-supabase-auth__error {
+  font-size: 11px;
+  color: #ff8c42;
+}
+
+@media (max-width: 420px) {
+  .geo-supabase-auth__actions {
+    grid-template-columns: 1fr;
+  }
+}
